@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
+import { FaLinkedin,FaGithub } from 'react-icons/fa';
 
 class Header extends Component {
   render() {
-    if (!this.props.data) return null;
+    /*if (!this.props.data) return null;
 
-    const project = this.props.data.project;
+   const project = this.props.data.project;
     const github = this.props.data.github;
     const name = this.props.data.name;
-    const description = this.props.data.description;
+    const description = this.props.data.description;*/
 
     return (
       <header id="home">
         <ParticlesBg type="circle" bg={true} />
 
-        <nav id="nav-wrap">
+        <nav id="nav-wrap" style={{fontSize:"20px"}}>
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
             Show navigation
           </a>
@@ -38,13 +39,13 @@ class Header extends Component {
 
             <li>
               <a className="smoothscroll" href="#resume">
-                Resume
+                Skills
               </a>
             </li>
 
             <li>
               <a className="smoothscroll" href="#portfolio">
-                Works
+                Projects
               </a>
             </li>
 
@@ -59,21 +60,21 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
-              <h1 className="responsive-headline">{name}</h1>
+              <h1  style={{fontSize:"80px"}}>{"Piyush Narkhede"}</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3>{description}.</h3>
-            </Fade>
+              <h2 style={{color:"crimson",fontSize:"40px"}}>{"Full Stack Web Developer"}</h2>
+    </Fade>
             <hr />
             <Fade bottom duration={2000}>
-              <ul className="social">
-                <a href={project} className="button btn project-btn">
-                  <i className="fa fa-book"></i>Project
+              <div style={{display:"flex", gap:"20px", margin:"auto", justifyContent:"center"}}>
+                <a href={"https://www.linkedin.com/in/piyush-narkhede-75a07b162/"}>
+                <FaLinkedin style={{color:"#0a66c2", fontSize:"70px"}}/>
                 </a>
-                <a href={github} className="button btn github-btn">
-                  <i className="fa fa-github"></i>Github
+                <a href={"https://github.com/psnarkhede"} >
+                <FaGithub style={{color:"black", fontSize:"70px"}}/>
                 </a>
-              </ul>
+              </div>
             </Fade>
           </div>
         </div>

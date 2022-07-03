@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
+import { FaLinkedin,FaGithub } from 'react-icons/fa';
 
 class Footer extends Component {
   render() {
-    if (!this.props.data) return null;
+    /*if (!this.props.data) return null;
 
     const networks = this.props.data.social.map(function (network) {
       return (
@@ -13,25 +14,20 @@ class Footer extends Component {
           </a>
         </li>
       );
-    });
+    });*/
 
     return (
       <footer>
         <div className="row">
           <Fade bottom>
-            <div className="twelve columns">
-              <ul className="social-links">{networks}</ul>
-
-              <ul className="copyright">
-                <li>&copy; Copyright 2021 Nordic Giant</li>
-                <li>
-                  Design by{" "}
-                  <a title="Styleshout" href="http://www.styleshout.com/">
-                    Styleshout
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div style={{display:"flex", gap:"20px", margin:"auto", justifyContent:"center"}}>
+                <a href={"https://www.linkedin.com/in/piyush-narkhede-75a07b162/"}>
+                <FaLinkedin style={{color:"#0a66c2", fontSize:"70px"}}/>
+                </a>
+                <a href={"https://github.com/psnarkhede"} >
+                <FaGithub style={{color:"white", fontSize:"70px"}}/>
+                </a>
+              </div>
           </Fade>
 
           <div id="go-top">

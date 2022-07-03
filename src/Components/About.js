@@ -3,7 +3,7 @@ import Fade from "react-reveal";
 
 class About extends Component {
   render() {
-    if (!this.props.data) return null;
+    /*if (!this.props.data) return null;
 
     const name = this.props.data.name;
     const profilepic = "images/" + this.props.data.image;
@@ -15,24 +15,24 @@ class About extends Component {
     const phone = this.props.data.phone;
     const email = this.props.data.email;
     const resumeDownload = this.props.data.resumedownload;
-
+*/
     return (
       <section id="about">
         <Fade duration={1000}>
           <div className="row">
             <div className="three columns">
               <img
-                className="profile-pic"
-                src={profilepic}
+                style={{width:"200px", height:"200px", borderRadius:"50%"}}
+                src={"https://avatars.githubusercontent.com/u/101566060?v=4"}
                 alt="Nordic Giant Profile Pic"
               />
             </div>
             <div className="nine columns main-col">
-              <h2>About Me</h2>
+              <h2 style={{fontSize:"24px"}}>About Me</h2>
 
-              <p>{bio}</p>
+              <p style={{fontSize:"18px"}}>{"An aspiring full-stack web developer, passionate about programming and always ready to learn new and evolving technologies. Always keen to utilize my skills to optimize the quality of solutions and contribute my knowledge to problem-solving in an effective manner."}</p>
               <div className="row">
-                <div className="columns contact-details">
+                {/*<div className="columns contact-details">
                   <h2>Contact Details</h2>
                   <p className="address">
                     <span>{name}</span>
@@ -47,10 +47,10 @@ class About extends Component {
                     <br />
                     <span>{email}</span>
                   </p>
-                </div>
+                </div>*/}
                 <div className="columns download">
                   <p>
-                    <a href={resumeDownload} className="button">
+                    <a href={"https://drive.google.com/file/d/1kvLfVq5r-ufhalZ2WaHOCTetIOGFGMpz/view?usp=sharing"} className="button">
                       <i className="fa fa-download"></i>Download Resume
                     </a>
                   </p>
